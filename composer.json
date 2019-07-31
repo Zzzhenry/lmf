@@ -1,0 +1,31 @@
+{
+    "name": "zhenry/lmf",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "zhenry",
+            "email": "zxh_henry@163.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Zhenry\\Lmf\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Zhenry\\Lmf\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },        
+        "laravel": {
+            "providers": [
+                "Zhenry\\Lmf\\LmfServiceProvider"
+            ]
+        }
+    }     
+}
