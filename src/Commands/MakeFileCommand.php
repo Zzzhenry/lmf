@@ -37,17 +37,19 @@ class MakeFileCommand extends GeneratorCommand
     {
         if ($this->option('trait')) {
             return __DIR__.'/../Stubs/Trait.stub';
-        }   
+        }
         if ($this->option('interface')) {
             return __DIR__.'/../Stubs/Interface.stub';
-        }        
+        }
+
         return __DIR__.'/../Stubs/Class.stub';
     }
 
     /**
      * Get the default namespace for the class.
      *
-     * @param  string  $rootNamespace
+     * @param string $rootNamespace
+     *
      * @return string
      */
     protected function getDefaultNamespace($rootNamespace)
@@ -66,5 +68,5 @@ class MakeFileCommand extends GeneratorCommand
             ['trait', 't', InputOption::VALUE_NONE, 'Indicates if the generated file should be a trait'],
             ['interface', 'i', InputOption::VALUE_NONE, 'Indicates if the generated file should be an interface'],
         ];
-    }    
+    }
 }
