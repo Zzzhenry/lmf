@@ -69,4 +69,19 @@ class MakeFileCommand extends GeneratorCommand
             ['interface', 'i', InputOption::VALUE_NONE, 'Indicates if the generated file should be an interface'],
         ];
     }
+
+    /**
+     * Parse the class name and format according to the root namespace.
+     *
+     * @param  string  $name
+     * @return string
+     */
+    protected function qualifyClass($name)
+    {
+        return str_replace(
+            '.',
+            '\\',
+            parent::qualifyClass($name)
+        );
+    }    
 }
