@@ -73,7 +73,8 @@ class MakeFileCommand extends GeneratorCommand
     /**
      * Parse the class name and format according to the root namespace.
      *
-     * @param  string  $name
+     * @param string $name
+     *
      * @return string
      */
     protected function qualifyClass($name)
@@ -83,5 +84,5 @@ class MakeFileCommand extends GeneratorCommand
             '\\',
             parent::qualifyClass($name)
         );
-    }    
+    }
 }
